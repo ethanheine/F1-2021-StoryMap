@@ -41,25 +41,21 @@
       map.on("load", () => {
         map.addSource("f1-circuits", {
           type: "geojson",
-          url: "",
+          data: "https://ethanheine.github.io/F1-2021-StoryMap/Data/f1-circuits.geojson",
         });
-        map.addLayer(
-          {
-            id: "terrain-data",
-            type: "line",
-            source: "mapbox-terrain",
-            "source-layer": "contour",
-            layout: {
-              "line-join": "round",
-              "line-cap": "round",
-            },
-            paint: {
-              "line-color": "#ff69b4",
-              "line-width": 1,
-            },
+        map.addLayer({
+          id: "circuits",
+          type: "line",
+          source: "f1-circuits",
+          layout: {
+            "line-join": "round",
+            "line-cap": "round",
           },
-          "road-label-simple" // Add layer below labels
-        );
+          paint: {
+            "line-color": "#888",
+            "line-width": 8,
+          },
+        });
       });
     </script>
   </body>
