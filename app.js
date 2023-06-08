@@ -46,9 +46,16 @@ const map = new mapboxgl.Map({
 });
 
 map.on("load", () => {
+  // Add circuit outlines
   map.addSource("circuits", {
     type: "geojson",
     data: "https://ethanheine.github.io/F1-2023-Locations/circuits.geojson",
+  });
+
+  // Add circuit locations
+  map.addSource("locations", {
+    type: "circle",
+    data: "https://ethanheine.github.io/F1-2023-Locations/locations.geojson"
   });
 
   map.addLayer({
@@ -61,9 +68,20 @@ map.on("load", () => {
     },
     paint: {
       "line-color": "#66023C",
-      "line-width": 6,
-      "line-opacity": [
-        "case",
+      "line-width": 5,
+    },
+  });
+
+  map.addLayer({
+    id: "circuit-locations",
+    type: "circle",
+    source: "locations",
+    paint: {
+      "circle-color": "66023C",
+      "circle-radius": 6,
+      "circle-stroke-width": 2,
+      "circle-stroke-color": "#ffffff",
+      "circle-opacity": [
         ["boolean", ["feature-state", "hover"], false],
         1,
         0.75,
