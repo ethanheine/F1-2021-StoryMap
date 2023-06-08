@@ -7,11 +7,23 @@
             "properties": {
                 "location": "Sakhir",
                 "name": "Bahrain International Circuit",
-                "id": "bh-2002"
+                "id": "bh-2002",
+                "Race Name": "Bahrain",
+                "opened": 2002,
+                "firstgp": 2004,
+                "races-held": 20,
+                "length": 5412,
+                "altitude": -16,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Lewis Hamilton (5)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [50.512, 26.031]
+                "coordinates": [
+                    50.512,
+                    26.031
+                ]
             }
         },
         {
@@ -19,11 +31,23 @@
             "properties": {
                 "location": "Jeddah",
                 "name": "Jeddah Corniche Circuit",
-                "id": "sa-2021"
+                "id": "sa-2021",
+                "Race Name": "Saudi Arabian",
+                "opened": 2021,
+                "firstgp": 2021,
+                "races-held": 3,
+                "length": 6175,
+                "altitude": 12,
+                "track-type": "Street circuit",
+                "past-winner": "Sergio Perez",
+                "most-wins": "Lewis Hamilton, Sergio Perez & Max Verstappen (1)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [39.104, 21.632]
+                "coordinates": [
+                    39.104,
+                    21.632
+                ]
             }
         },
         {
@@ -31,11 +55,23 @@
             "properties": {
                 "location": "Melbourne",
                 "name": "Albert Park Circuit",
-                "id": "au-1953"
+                "id": "au-1953",
+                "Race Name": "Australian",
+                "opened": 1953,
+                "firstgp": 1996,
+                "races-held": 26,
+                "length": 5027,
+                "altitude": 10,
+                "track-type": "Street circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Lex Davison & Michael Schumacher (4)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [144.970, -37.846]
+                "coordinates": [
+                    144.970,
+                    -37.846
+                ]
             }
         },
         {
@@ -43,11 +79,23 @@
             "properties": {
                 "location": "Baku",
                 "name": "Baku City Circuit",
-                "id": "az-2016"
+                "id": "az-2016",
+                "Race Name": "Azerbaijan",
+                "opened": 2016,
+                "firstgp": 2016,
+                "races-held": 7,
+                "length": 6003,
+                "altitude": -25,
+                "track-type": "Street circuit",
+                "past-winner": "Sergio Perez",
+                "most-wins": "Sergio Perez (2)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [49.842, 40.369]
+                "coordinates": [
+                    49.842,
+                    40.369
+                ]
             }
         },
         {
@@ -55,11 +103,23 @@
             "properties": {
                 "location": "Miami",
                 "name": "Miami International Autodrome",
-                "id": "us-2022"
+                "id": "us-2022",
+                "Race Name": "Miami",
+                "opened": 2022,
+                "firstgp": 2022,
+                "races-held": 2,
+                "length": 5412,
+                "altitude": 1,
+                "track-type": "Street circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Max Verstappen (2)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-80.239, 25.958]
+                "coordinates": [
+                    -80.239,
+                    25.958
+                ]
             }
         },
         {
@@ -67,11 +127,23 @@
             "properties": {
                 "location": "Imola",
                 "name": "Autodromo Enzo e Dino Ferrari",
-                "id": "it-1953"
+                "id": "it-1953",
+                "Race Name": "Emilia Romagna",
+                "opened": 1953,
+                "firstgp": 1980,
+                "races-held": 30,
+                "length": 4909,
+                "altitude": 47,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Michael Schumacher (7)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [11.713, 44.341]
+                "coordinates": [
+                    11.713,
+                    44.341
+                ]
             }
         },
         {
@@ -79,11 +151,23 @@
             "properties": {
                 "location": "Monte Carlo",
                 "name": "Circuit de Monaco",
-                "id": "mc-1929"
+                "id": "mc-1929",
+                "Race Name": "Monaco",
+                "opened": 1929,
+                "firstgp": 1929,
+                "races-held": 69,
+                "length": 3337,
+                "altitude": 47,
+                "track-type": "Street circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Ayrton Senna (6)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [7.429, 43.737]
+                "coordinates": [
+                    7.429,
+                    43.737
+                ]
             }
         },
         {
@@ -91,11 +175,23 @@
             "properties": {
                 "location": "Barcelona",
                 "name": "Circuit de Barcelona-Catalunya",
-                "id": "es-1991"
+                "id": "es-1991",
+                "Race Name": "Spanish",
+                "opened": 1991,
+                "firstgp": 1991,
+                "races-held": 33,
+                "length": 4655,
+                "altitude": 165,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Michael Schumacher & Lewis Hamilton (6)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [2.259, 41.569]
+                "coordinates": [
+                    2.259,
+                    41.569
+                ]
             }
         },
         {
@@ -103,11 +199,23 @@
             "properties": {
                 "location": "Montreal",
                 "name": "Circuit Gilles-Villeneueve",
-                "id": "ca-1978"
+                "id": "ca-1978",
+                "Race Name": "Canadian",
+                "opened": 1978,
+                "firstgp": 1978,
+                "races-held": 41,
+                "length": 4361,
+                "altitude": 13,
+                "track-type": "Street circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Michael Schumacher & Lewis Hamilton (7)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-73.525, 45.506]
+                "coordinates": [
+                    -73.525,
+                    45.506
+                ]
             }
         },
         {
@@ -115,11 +223,23 @@
             "properties": {
                 "location": "Spielberg",
                 "name": "Red Bull Ring",
-                "id": "at-1969"
+                "id": "at-1969",
+                "Race Name": "Austrian",
+                "opened": 1969,
+                "firstgp": 1970,
+                "races-held": 36,
+                "length": 4318,
+                "altitude": 721,
+                "track-type": "Race circuit",
+                "past-winner": "Charles Leclerc",
+                "most-wins": "Jo Siffert, Alain Prost & Max Verstappen (3)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [14.761, 47.223]
+                "coordinates": [
+                    14.761,
+                    47.223
+                ]
             }
         },
         {
@@ -127,11 +247,23 @@
             "properties": {
                 "location": "Silverstone",
                 "name": "Silverstone Circuit",
-                "id": "gb-1948"
+                "id": "gb-1948",
+                "Race Name": "British",
+                "opened": 1948,
+                "firstgp": 1950,
+                "races-held": 57,
+                "length": 5891,
+                "altitude": 196,
+                "track-type": "Race circuit",
+                "past-winner": "Carlos Sainz",
+                "most-wins": "Lewis Hamilton (7)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-1.017, 52.072]
+                "coordinates": [
+                    -1.017,
+                    52.072
+                ]
             }
         },
         {
@@ -139,11 +271,23 @@
             "properties": {
                 "location": "Budapest",
                 "name": "Hungaroring",
-                "id": "hu-1986"
+                "id": "hu-1986",
+                "Race Name": "Hungarian",
+                "opened": 1986,
+                "firstgp": 1986,
+                "races-held": 37,
+                "length": 4381,
+                "altitude": 239,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Lewis Hamilton (8)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [19.250, 47.583]
+                "coordinates": [
+                    19.250,
+                    47.583
+                ]
             }
         },
         {
@@ -151,11 +295,23 @@
             "properties": {
                 "location": "Spa Francorchamps",
                 "name": "Circuit de Spa-Francorchamps",
-                "id": "be-1925"
+                "id": "be-1925",
+                "Race Name": "Belgian",
+                "opened": 1925,
+                "firstgp": 1950,
+                "races-held": 55,
+                "length": 7004,
+                "altitude": 413,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Michael Schumacher (6)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [5.971, 50.436]
+                "coordinates": [
+                    5.971,
+                    50.436
+                ]
             }
         },
         {
@@ -163,11 +319,23 @@
             "properties": {
                 "location": "Zandvoort",
                 "name": "Circuit Zandvoort",
-                "id": "nl-1948"
+                "id": "nl-1948",
+                "Race Name": "Dutch",
+                "opened": 1948,
+                "firstgp": 1952,
+                "races-held": 32,
+                "length": 4259,
+                "altitude": 3,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Jim Clark (4)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [4.541, 52.389]
+                "coordinates": [
+                    4.541,
+                    52.389
+                ]
             }
         },
         {
@@ -175,11 +343,23 @@
             "properties": {
                 "location": "Monza",
                 "name": "Autodromo Nazionale Monza",
-                "id": "it-1922"
+                "id": "it-1922",
+                "Race Name": "Italian",
+                "opened": 1922,
+                "firstgp": 1950,
+                "races-held": 72,
+                "length": 5793,
+                "altitude": 142,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Michael Schumacher & Lewis Hamilton (5)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [9.290, 45.621]
+                "coordinates": [
+                    9.290,
+                    45.621
+                ]
             }
         },
         {
@@ -187,11 +367,23 @@
             "properties": {
                 "location": "Singapore",
                 "name": "Marina Bay Street Circuit",
-                "id": "sg-2008"
+                "id": "sg-2008",
+                "Race Name": "Singapore",
+                "opened": 2008,
+                "firstgp": 2008,
+                "races-held": 13,
+                "length": 4928,
+                "altitude": 18,
+                "track-type": "Street circuit",
+                "past-winner": "Sergio Perez",
+                "most-wins": "Sebastian Vettel (5)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [103.859, 1.291]
+                "coordinates": [
+                    103.859,
+                    1.291
+                ]
             }
         },
         {
@@ -199,11 +391,23 @@
             "properties": {
                 "location": "Suzuka",
                 "name": "Suzuka International Racing Circuit",
-                "id": "jp-1962"
+                "id": "jp-1962",
+                "Race Name": "Japanese",
+                "opened": 1962,
+                "firstgp": 1987,
+                "races-held": 32,
+                "length": 5807,
+                "altitude": 60,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Michael Schumacher (6)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [136.534, 34.844]
+                "coordinates": [
+                    136.534,
+                    34.844
+                ]
             }
         },
         {
@@ -211,11 +415,23 @@
             "properties": {
                 "location": "Lusail",
                 "name": "Losail Internaitonal Circuit",
-                "id": "qa-2004"
+                "id": "qa-2004",
+                "Race Name": "Qatar",
+                "opened": 2004,
+                "firstgp": 2021,
+                "races-held": 1,
+                "length": 5380,
+                "altitude": 5,
+                "track-type": "Race circuit",
+                "past-winner": "Lewis Hamilton",
+                "most-wins": "Lewis Hamilton (1)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [51.454, 25.49]
+                "coordinates": [
+                    51.454,
+                    25.49
+                ]
             }
         },
         {
@@ -223,11 +439,23 @@
             "properties": {
                 "location": "Austin",
                 "name": "Circuit of the Americas",
-                "id": "us-2012"
+                "id": "us-2012",
+                "Race Name": "United States",
+                "opened": 2012,
+                "firstgp": 2012,
+                "races-held": 10,
+                "length": 5514,
+                "altitude": 130,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Lewis Hamilton (6)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-97.633, 30.135]
+                "coordinates": [
+                    -97.633,
+                    30.135
+                ]
             }
         },
         {
@@ -235,11 +463,23 @@
             "properties": {
                 "location": "Mexico City",
                 "name": "Autodromo Hermanos Rodriquez",
-                "id": "mx-1962"
+                "id": "mx-1962",
+                "Race Name": "Mexican",
+                "opened": 1962,
+                "firstgp": 1963,
+                "races-held": 22,
+                "length": 4304,
+                "altitude": 2232,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Max Verstappen (4)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-99.091, 19.402]
+                "coordinates": [
+                    -99.091,
+                    19.402
+                ]
             }
         },
         {
@@ -247,11 +487,23 @@
             "properties": {
                 "location": "Sao Paulo",
                 "name": "Autodromo Jose Carlos Pace - Interlagos",
-                "id": "br-1940"
+                "id": "br-1940",
+                "Race Name": "Brazilian",
+                "opened": 1940,
+                "firstgp": 1972,
+                "races-held": 39,
+                "length": 4309,
+                "altitude": 765,
+                "track-type": "Race circuit",
+                "past-winner": "George Russell",
+                "most-wins": "Alain Prost (6)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-46.698, -23.702]
+                "coordinates": [
+                    -46.698,
+                    -23.702
+                ]
             }
         },
         {
@@ -259,11 +511,23 @@
             "properties": {
                 "location": "Las Vegas",
                 "name": "Las Vegas Street Circuit",
-                "id": "us-2023"
+                "id": "us-2023",
+                "Race Name": "Las Vegas",
+                "opened": 2023,
+                "firstgp": 2023,
+                "races-held": 0,
+                "length": 6116,
+                "altitude": 610,
+                "track-type": "Street circuit",
+                "past-winner": "N/A",
+                "most-wins": "N/A"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-115.168, 36.116]
+                "coordinates": [
+                    -115.168,
+                    36.116
+                ]
             }
         },
         {
@@ -271,11 +535,23 @@
             "properties": {
                 "location": "Abu Dhabi",
                 "name": "Yas Marina Circuit",
-                "id": "ae-2009"
+                "id": "ae-2009",
+                "Race Name": "Abu Dhabi",
+                "opened": 2009,
+                "firstgp": 2009,
+                "races-held": 14,
+                "length": 5554,
+                "altitude": 9,
+                "track-type": "Race circuit",
+                "past-winner": "Max Verstappen",
+                "most-wins": "Lewis Hamilton (5)"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [54.601, 24.471]
+                "coordinates": [
+                    54.601,
+                    24.471
+                ]
             }
         }
     ]
