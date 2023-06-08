@@ -54,7 +54,7 @@ map.on("load", () => {
 
   map.addSource("locations", {
     type: "geojson",
-    data: "https://ethanheine.github.io/F1-2023-Locations/locations.json",
+    data: "https://ethanheine.github.io/F1-2023-Locations/locations.geojson",
   });
 
   map.addLayer({
