@@ -48,7 +48,7 @@ const map = new mapboxgl.Map({
 map.on("load", () => {
   map.addSource("circuits", {
     type: "geojson",
-    data: "https://ethanheine.github.io/F1-2023-Locations/Data/f1-2023-circuits.geojson",
+    data: "https://ethanheine.github.io/F1-2023-Locations/circuits.geojson",
   });
 
   map.addLayer({
@@ -60,8 +60,14 @@ map.on("load", () => {
       "line-cap": "round",
     },
     paint: {
-      "line-color": "#ff1801",
-      "line-width": 5,
+      "line-color": "#66023C",
+      "line-width": 6,
+      "line-opacity": [
+        "case",
+        ["boolean", ["feature-state", "hover"], false],
+        1,
+        0.75,
+      ],
     },
   });
 })
