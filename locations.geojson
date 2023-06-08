@@ -10,6 +10,7 @@
                 "id": "bh-2002"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [50.512, 26.031]
             }
         },
@@ -21,6 +22,7 @@
                 "id": "sa-2021"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [39.104, 21.632]
             }
         },
@@ -32,6 +34,7 @@
                 "id": "au-1953"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [144.970, -37.846]
             }
         },
@@ -43,6 +46,7 @@
                 "id": "az-2016"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [49.842, 40.369]
             }
         },
@@ -54,6 +58,7 @@
                 "id": "us-2022"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [-80.239, 25.958]
             }
         },
@@ -65,6 +70,7 @@
                 "id": "it-1953"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [11.713, 44.341]
             }
         },
@@ -76,6 +82,7 @@
                 "id": "mc-1929"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [7.429, 43.737]
             }
         },
@@ -87,6 +94,7 @@
                 "id": "es-1991"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [2.259, 41.569]
             }
         },
@@ -98,6 +106,7 @@
                 "id": "ca-1978"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [-73.525, 45.506]
             }
         },
@@ -109,6 +118,7 @@
                 "id": "at-1969"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [14.761, 47.223]
             }
         },
@@ -120,6 +130,7 @@
                 "id": "gb-1948"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [-1.017, 52.072]
             }
         },
@@ -131,6 +142,7 @@
                 "id": "hu-1986"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [19.250, 47.583]
             }
         },
@@ -142,6 +154,7 @@
                 "id": "be-1925"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [5.971, 50.436]
             }
         },
@@ -153,6 +166,7 @@
                 "id": "nl-1948"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [4.541, 52.389]
             }
         },
@@ -164,6 +178,7 @@
                 "id": "it-1922"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [9.290, 45.621]
             }
         },
@@ -175,6 +190,7 @@
                 "id": "sg-2008"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [103.859, 1.291]
             }
         },
@@ -186,6 +202,7 @@
                 "id": "jp-1962"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [136.534, 34.844]
             }
         },
@@ -197,6 +214,7 @@
                 "id": "qa-2004"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [51.454, 25.49]
             }
         },
@@ -208,6 +226,7 @@
                 "id": "us-2012"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [-97.633, 30.135]
             }
         },
@@ -219,6 +238,7 @@
                 "id": "mx-1962"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [-99.091, 19.402]
             }
         },
@@ -230,6 +250,7 @@
                 "id": "br-1940"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [-46.698, -23.702]
             }
         },
@@ -241,6 +262,7 @@
                 "id": "us-2023"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [-115.168, 36.116]
             }
         },
@@ -252,6 +274,7 @@
                 "id": "ae-2009"
             },
             "geometry": {
+                "type": "Feature",
                 "coordinates": [54.601, 24.471]
             }
         }
