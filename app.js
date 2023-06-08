@@ -52,10 +52,9 @@ map.on("load", () => {
     data: "https://ethanheine.github.io/F1-2023-Locations/circuits.geojson",
   });
 
-  // Add circuit locations
   map.addSource("locations", {
-    type: "circle",
-    data: "https://ethanheine.github.io/F1-2023-Locations/locations.geojson"
+    type: "geojson",
+    data: "https://ethanheine.github.io/F1-2023-Locations/locations.json",
   });
 
   map.addLayer({
@@ -77,11 +76,12 @@ map.on("load", () => {
     type: "circle",
     source: "locations",
     paint: {
-      "circle-color": "66023C",
+      "circle-color": "#66023C",
       "circle-radius": 6,
       "circle-stroke-width": 2,
       "circle-stroke-color": "#ffffff",
       "circle-opacity": [
+        "case",
         ["boolean", ["feature-state", "hover"], false],
         1,
         0.75,
