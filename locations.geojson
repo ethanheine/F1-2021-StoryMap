@@ -1,0 +1,259 @@
+{
+    "type": "FeatureCollection",
+    "name": "Locations",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Sakhir",
+                "name": "Bahrain International Circuit",
+                "id": "bh-2002"
+            },
+            "geometry": {
+                "coordinates": [50.512, 26.031]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Jeddah",
+                "name": "Jeddah Corniche Circuit",
+                "id": "sa-2021"
+            },
+            "geometry": {
+                "coordinates": [39.104, 21.632]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Melbourne",
+                "name": "Albert Park Circuit",
+                "id": "au-1953"
+            },
+            "geometry": {
+                "coordinates": [144.970, -37.846]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Baku",
+                "name": "Baku City Circuit",
+                "id": "az-2016"
+            },
+            "geometry": {
+                "coordinates": [49.842, 40.369]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Miami",
+                "name": "Miami International Autodrome",
+                "id": "us-2022"
+            },
+            "geometry": {
+                "coordinates": [-80.239, 25.958]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Imola",
+                "name": "Autodromo Enzo e Dino Ferrari",
+                "id": "it-1953"
+            },
+            "geometry": {
+                "coordinates": [11.713, 44.341]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Monte Carlo",
+                "name": "Circuit de Monaco",
+                "id": "mc-1929"
+            },
+            "geometry": {
+                "coordinates": [7.429, 43.737]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Barcelona",
+                "name": "Circuit de Barcelona-Catalunya",
+                "id": "es-1991"
+            },
+            "geometry": {
+                "coordinates": [2.259, 41.569]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Montreal",
+                "name": "Circuit Gilles-Villeneueve",
+                "id": "ca-1978"
+            },
+            "geometry": {
+                "coordinates": [-73.525, 45.506]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Spielberg",
+                "name": "Red Bull Ring",
+                "id": "at-1969"
+            },
+            "geometry": {
+                "coordinates": [14.761, 47.223]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Silverstone",
+                "name": "Silverstone Circuit",
+                "id": "gb-1948"
+            },
+            "geometry": {
+                "coordinates": [-1.017, 52.072]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Budapest",
+                "name": "Hungaroring",
+                "id": "hu-1986"
+            },
+            "geometry": {
+                "coordinates": [19.250, 47.583]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Spa Francorchamps",
+                "name": "Circuit de Spa-Francorchamps",
+                "id": "be-1925"
+            },
+            "geometry": {
+                "coordinates": [5.971, 50.436]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Zandvoort",
+                "name": "Circuit Zandvoort",
+                "id": "nl-1948"
+            },
+            "geometry": {
+                "coordinates": [4.541, 52.389]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Monza",
+                "name": "Autodromo Nazionale Monza",
+                "id": "it-1922"
+            },
+            "geometry": {
+                "coordinates": [9.290, 45.621]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Singapore",
+                "name": "Marina Bay Street Circuit",
+                "id": "sg-2008"
+            },
+            "geometry": {
+                "coordinates": [103.859, 1.291]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Suzuka",
+                "name": "Suzuka International Racing Circuit",
+                "id": "jp-1962"
+            },
+            "geometry": {
+                "coordinates": [136.534, 34.844]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Lusail",
+                "name": "Losail Internaitonal Circuit",
+                "id": "qa-2004"
+            },
+            "geometry": {
+                "coordinates": [51.454, 25.49]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Austin",
+                "name": "Circuit of the Americas",
+                "id": "us-2012"
+            },
+            "geometry": {
+                "coordinates": [-97.633, 30.135]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Mexico City",
+                "name": "Autodromo Hermanos Rodriquez",
+                "id": "mx-1962"
+            },
+            "geometry": {
+                "coordinates": [-99.091, 19.402]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Sao Paulo",
+                "name": "Autodromo Jose Carlos Pace - Interlagos",
+                "id": "br-1940"
+            },
+            "geometry": {
+                "coordinates": [-46.698, -23.702]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Las Vegas",
+                "name": "Las Vegas Street Circuit",
+                "id": "us-2023"
+            },
+            "geometry": {
+                "coordinates": [-115.168, 36.116]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "location": "Abu Dhabi",
+                "name": "Yas Marina Circuit",
+                "id": "ae-2009"
+            },
+            "geometry": {
+                "coordinates": [54.601, 24.471]
+            }
+        }
+    ]
+}
