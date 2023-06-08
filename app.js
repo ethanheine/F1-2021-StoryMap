@@ -1,3 +1,17 @@
+/* DEFINE FUNCTIONS */
+
+let popup = null;
+function setInfo(feature) {
+  // Get base information
+
+
+
+
+
+}
+
+
+
 // Load GeoJSON data
 function loadGeoJSON(callback) {
   var xhr = new XMLHttpRequest();
@@ -39,11 +53,17 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiZXRoYW5oZWluZSIsImEiOiJjbGlmYjhwNTgwY2M1M2ptc2xucHhuMXY2In0.i01L2hrCZX-j45M3QBNing";
 const map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/outdoors-v12",
-  zoom: 1,
+  style: "mapbox://styles/mapbox/streets-v12",
+  zoom: 2,
+  minZoom: 2,
   center: [-74, 40.7],
-  maxZoom: 14,
+  maxZoom: 15,
 });
+map.addControl(
+  new mapboxgl.NavigationControl({
+    showCompass: false,
+  })
+)
 
 map.on("load", () => {
   // Add circuit outlines
@@ -55,6 +75,9 @@ map.on("load", () => {
   map.addSource("locations", {
     type: "geojson",
     data: "https://ethanheine.github.io/F1-2023-Locations/locations.geojson",
+    cluster: true,
+    clusterMaxZoom: 6,
+    clusterRadius: 35,
   });
 
   map.addLayer({
@@ -66,26 +89,59 @@ map.on("load", () => {
       "line-cap": "round",
     },
     paint: {
-      "line-color": "#66023C",
-      "line-width": 5,
+      "line-color": "#ff1801",
+      "line-width": 6,
     },
   });
 
   map.addLayer({
-    id: "circuit-locations",
+    id: "unclustered-locations",
     type: "circle",
     source: "locations",
+    filter: ["!", ["has", "point_count"]],
     paint: {
       "circle-color": "#66023C",
       "circle-radius": 6,
       "circle-stroke-width": 2,
       "circle-stroke-color": "#ffffff",
-      "circle-opacity": [
-        "case",
-        ["boolean", ["feature-state", "hover"], false],
-        1,
-        0.75,
-      ],
     },
   });
-})
+
+  map.addLayer({
+    id: "clusters",
+    type: "circle",
+    source: "locations",
+    filter: ["has", "point_count"],
+    paint: {
+      "circle-color": "#66023C",
+      "circle-radius": [
+        "step",
+        ["get", "point_count"],
+        12,
+        5,
+        15,
+        10,
+        20,
+        15,
+        20,
+        25,
+        32,
+      ],
+      "circle-stroke-width": 2,
+      "circle-stroke-color": "#ffffff",
+    },
+  });
+
+  map.addLayer({
+    id: "cluster-count",
+    type: "symbol",
+    source: "locations",
+    filter: ["has", "point_count"],
+    layout: {
+      "text-field": ["to-string", ["get", "point_count"]],
+      "text-font": ["Open Sans ExtraBold"],
+      "text-size": 13,
+    },
+    paint: { "text-color": "#fff" },
+  });
+});
