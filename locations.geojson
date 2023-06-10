@@ -1,9 +1,8 @@
 {
     "type": "FeatureCollection",
-    "name": "Locations",
     "features": [
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Sakhir, Bahrain",
                 "name": "Bahrain International Circuit",
@@ -26,7 +25,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Jeddah, Saudi Arabia",
                 "name": "Jeddah Corniche Circuit",
@@ -49,7 +48,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Melbourne, Australia",
                 "name": "Albert Park Circuit",
@@ -72,7 +71,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Baku, Azerbaijan",
                 "name": "Baku City Circuit",
@@ -95,7 +94,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Miami, United States",
                 "name": "Miami International Autodrome",
@@ -118,7 +117,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Imola, Italy",
                 "name": "Autodromo Enzo e Dino Ferrari",
@@ -141,7 +140,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Monte Carlo, Monaco",
                 "name": "Circuit de Monaco",
@@ -164,7 +163,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Barcelona, Spain",
                 "name": "Circuit de Barcelona-Catalunya",
@@ -187,7 +186,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Montreal, Canada",
                 "name": "Circuit Gilles-Villeneueve",
@@ -210,7 +209,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Spielberg, Austria",
                 "name": "Red Bull Ring",
@@ -233,7 +232,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Silverstone, United Kingdom",
                 "name": "Silverstone Circuit",
@@ -256,7 +255,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Budapest, Hungary",
                 "name": "Hungaroring",
@@ -279,7 +278,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Spa Francorchamps, Belgium",
                 "name": "Circuit de Spa-Francorchamps",
@@ -302,7 +301,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Zandvoort, Netherlands",
                 "name": "Circuit Zandvoort",
@@ -325,7 +324,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Monza, Italy",
                 "name": "Autodromo Nazionale Monza",
@@ -348,7 +347,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Singapore",
                 "name": "Marina Bay Street Circuit",
@@ -371,7 +370,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Suzuka, Japan",
                 "name": "Suzuka International Racing Circuit",
@@ -394,7 +393,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Lusail, Qatar",
                 "name": "Losail Internaitonal Circuit",
@@ -417,7 +416,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Austin, United States",
                 "name": "Circuit of the Americas",
@@ -440,7 +439,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Mexico City, Mexico",
                 "name": "Autodromo Hermanos Rodriquez",
@@ -463,7 +462,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Sao Paulo, Brazil",
                 "name": "Autodromo Jose Carlos Pace - Interlagos",
@@ -486,7 +485,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Las Vegas, United States",
                 "name": "Las Vegas Street Circuit",
@@ -509,7 +508,7 @@
             }
         },
         {
-            "type": "Point",
+            "type": "Feature",
             "properties": {
                 "location": "Abu Dhabi, United Arab Emirates",
                 "name": "Yas Marina Circuit",
