@@ -10,6 +10,12 @@
       href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       * {
@@ -18,7 +24,7 @@
 
       body {
         color: #404040;
-        font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", sans-serif;
+        font: 400 15px/22px "Titillium Web", "Helvetica Neue", sans-serif;
         margin: 0;
         padding: 0;
         -webkit-font-smoothing: antialiased;
@@ -41,8 +47,7 @@
         color: #101010;
       }
 
-      /* The page is split between map and sidebar - the sidebar gets 1/3, map
-  gets 2/3 of the page. You can adjust this to your personal liking. */
+      /* Page is split between the map and sidebar */
       .sidebar {
         position: absolute;
         width: 25%;
@@ -62,7 +67,7 @@
       }
 
       .heading {
-        background: #fff;
+        background: #faf9f6;
         border-bottom: 1px solid #eee;
         height: 60px;
         line-height: 60px;
@@ -132,7 +137,7 @@
       }
 
       .mapboxgl-popup-content h3 {
-        background: #91c949;
+        background: #ff1801;
         color: #fff;
         margin: 0;
         padding: 10px;
@@ -188,7 +193,7 @@
 
       const map = new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/light-v11",
+        style: "mapbox://styles/mapbox/outdoors-v12",
         center: [0, 25],
         zoom: 2,
       });
@@ -205,6 +210,9 @@
             properties: {
               location: "Sakhir, Bahrain",
               name: "Bahrain International Circuit",
+              raceName: "Bahrain",
+              content:
+                "Hosted at the Bahrain International Circuit in Sakhir, the race is known for its hot weather and challenging desert conditions, pushing the cars and drivers to their limits.",
             },
           },
           {
@@ -216,6 +224,9 @@
             properties: {
               location: "Jeddah, Saudi Arabia",
               name: "Jeddah Corniche Circuit",
+              raceName: "Saudi Arabian",
+              content:
+                "Held in Jeddah, Saudi Arabia, the race features a newly designed street circuit. With a mix of high-speed straights and technical sections, it offers many challenges and unpredictable racing action."
             },
           },
           {
@@ -227,6 +238,9 @@
             properties: {
               location: "Melbourne, Australia",
               name: "Albert Park Circuit",
+              raceName: "Australian",
+              content:
+                "Held in Melbourne, Australia. The Australian Grand Prix is known for its fast and flowing track, demanding good traction and a balanced setup."
             },
           },
           {
@@ -238,6 +252,9 @@
             properties: {
               location: "Baku, Azerbaijan",
               name: "Baku City Circuit",
+              raceName: "Azerbaijan",
+              content:
+                "Held on the streets of Baku, the Azerbaijan Grand Prix features a mix of high-speed sections and tight corners, often leading to unpredictable races and dramatic moments."
             },
           },
           {
@@ -249,6 +266,9 @@
             properties: {
               location: "Miami, United States",
               name: "Miami International Autodrome",
+              raceName: "Miami",
+              content:
+                "Situated in Miami Gardens around the Hard Rock Stadium, the circuit combines fast straights with challenging corners, providing opportunities for overtaking and intense battles."
             },
           },
           {
@@ -260,6 +280,9 @@
             properties: {
               location: "Imola, Italy",
               name: "Autodromo Enzo e Dino Ferrari",
+              raceName: "Emilia Romagna",
+              content:
+                "Held at the Autodromo Enzo e Dino Ferrari in Italy, the race offers a legendary and challenging circuit. With its fast straights and technical sections, it provides an exciting spectacle for drivers and fans alike."
             },
           },
           {
@@ -271,6 +294,8 @@
             properties: {
               location: "Monte Carlo, Monaco",
               name: "Circuit de Monaco",
+              raceName: "Monaco",
+              content: "The iconic Monaco Grand Prix is held on the narrow and challenging streets of Monte Carlo. With limited overtaking opportunities, qualifying well is crucial for success on this prestigious circuit."
             },
           },
           {
@@ -282,6 +307,9 @@
             properties: {
               location: "Barcelona, Spain",
               name: "Circuit de Barcelona-Catalunya",
+              raceName: "Spanish",
+              content: 
+                "Hosted at the Circuit de Barcelona-Catalunya, the Spanish Grand Prix is known for its diverse range of corners, making it a favorite among teams for testing and assessing car performance."
             },
           },
           {
@@ -293,6 +321,9 @@
             properties: {
               location: "Montreal, Canada",
               name: "Circuit Gilles-Villeneuve",
+              raceName: "Canadian",
+              content:
+                "Taking place at the Circuit Gilles Villeneuve in Montreal, the Canadian Grand Prix is known for its high-speed straights and heavy braking zones, often resulting in exciting overtaking maneuvers."
             },
           },
           {
@@ -304,6 +335,9 @@
             properties: {
               location: "Spielberg, Austria",
               name: "Red Bull Ring",
+              raceName: "Austrian",
+              content: 
+                "Held at the Red Bull Ring in Spielberg, Austria, the Austrian Grand Prix is known for its picturesque setting and high-speed nature. The track provides opportunities for close racing and overtaking."
             },
           },
           {
@@ -315,6 +349,9 @@
             properties: {
               location: "Silverstone, United Kingdom",
               name: "Silverstone Circuit",
+              raceName: "British",
+              content: 
+                "Taking place at the historic Silverstone Circuit, the British Grand Prix is known for its high-speed layout and passionate crowd. The circuit's fast corners test the drivers' skill and courage."
             },
           },
           {
@@ -326,6 +363,9 @@
             properties: {
               location: "Budapest, Hungary",
               name: "Hungaroring",
+              raceName: "Hungarian",
+              content: 
+                "Held at the Hungaroring near Budapest, the Hungarian Grand Prix is a demanding and twisty circuit that requires good downforce and driver concentration. Overtaking can be challenging."
             },
           },
           {
@@ -337,6 +377,9 @@
             properties: {
               location: "Spa Francorchamps, Belgium",
               name: "Circuit de Spa-Francorchamps",
+              raceName: "Belgian",
+              content: 
+                "Taking place at the legendary Circuit de Spa-Francorchamps, the Belgian Grand Prix is renowned for its fast and flowing nature. The circuit's unpredictable weather often adds to the excitement."
             },
           },
           {
@@ -348,6 +391,9 @@
             properties: {
               location: "Zandvoort, Netherlands",
               name: "Circuit Zandvoort",
+              raceName: "Dutch",
+              content: 
+                "The Dutch Grand Prix at Zandvoort is a highly anticipated race held at the historic Circuit Zandvoort in the Netherlands. Known for its scenic coastal location, the circuit features fast and flowing corners, providing a thrilling experience for drivers."
             },
           },
           {
@@ -359,6 +405,9 @@
             properties: {
               location: "Monza, Italy",
               name: "Autodromo Nazionale Monza",
+              raceName: "Italian",
+              content: 
+                "Hosted at the historic Autodromo Nazionale Monza, the Italian Grand Prix is all about raw speed. With its long straights and minimal chicanes, it tests the cars' power and straight-line performance."
             },
           },
           {
@@ -370,6 +419,9 @@
             properties: {
               location: "Singapore",
               name: "Marina Bay Street Circuit",
+              raceName: "Singapore",
+              content:
+                "The Singapore Grand Prix is a challenging night race held on the Marina Bay Street Circuit. The bumpy street surface and high humidity make it physically demanding for the drivers."
             },
           },
           {
@@ -381,6 +433,9 @@
             properties: {
               location: "Suzuka, Japan",
               name: "Suzuka International Racing Course",
+              raceName: "Japanese",
+              content: 
+                "Hosted at the iconic Suzuka Circuit, the Japanese Grand Prix is renowned for its fast and demanding track layout. The figure-eight circuit features challenging corners like the famous 130R."
             },
           },
           {
@@ -392,6 +447,9 @@
             properties: {
               location: "Lusail, Qatar",
               name: "Losail International Circuit",
+              raceName: "Qatar",
+              content: 
+                "Losail International Circuit is located around 30km north of Doha. The 5.4km layout runs clockwise and features sixteen turns."
             },
           },
           {
@@ -403,6 +461,9 @@
             properties: {
               location: "Austin, United States",
               name: "Circuit of the Americas",
+              raceName: "United States",
+              content: 
+                "Taking place at the Circuit of the Americas in Austin, Texas, the United States Grand Prix offers a challenging mix of fast and technical sections. The circuit's undulating layout provides an exciting race."
             },
           },
           {
@@ -414,6 +475,9 @@
             properties: {
               location: "Mexico City, Mexico",
               name: "Autódromo Hermanos Rodríguez",
+              raceName: "Mexican",
+              content: 
+                "Held at the Autodromo Hermanos Rodriguez in Mexico City, the Mexican Grand Prix is known for its high altitude, which affects the cars' aerodynamics and engine performance. The passionate Mexican fans create a vibrant atmosphere."
             },
           },
           {
@@ -425,6 +489,9 @@
             properties: {
               location: "Sao Paulo, Brazil",
               name: "Autódromo José Carlos Pace - Interlagos",
+              raceName: "Brazilian",
+              content: 
+                "Hosted at the Autódromo José Carlos Pace in São Paulo, the Brazilian Grand Prix is famous for its unpredictable weather and challenging track conditions. The race often produces thrilling overtakes and surprises."
             },
           },
           {
@@ -436,6 +503,9 @@
             properties: {
               location: "Las Vegas, United States",
               name: "Las Vegas Street Circuit",
+              raceName: "Las Vegas",
+              content: 
+                "40 years on from F1’s last visit to Las Vegas, the sport is due to return in 2023 with the all-new Las Vegas Grand Prix. The Grand Prix will take place on a high speed street circuit, travelling over 6km through the city and passing many famous landmarks on the Las Vegas Strip."
             },
           },
           {
@@ -447,6 +517,9 @@
             properties: {
               location: "Abu Dhabi, United Arab Emirates",
               name: "Yas Marina Circuit",
+              raceName: "Abu Dhabi",
+              content: 
+                "The season finale held at the Yas Marina Circuit in Abu Dhabi. The race starts in daylight and ends under floodlights, creating a unique atmosphere. The circuit features a mix of technical sections and long straights."
             },
           },
         ],
@@ -465,7 +538,7 @@
 
         map.addSource("f1-circuits", {
           type: "geojson",
-          data: "https://ethanheine.github.io/F1-2023-Locations/Data/f1-2023-circuits.geojson",
+          data: "https://ethanheine.github.io/F1-2023-Locations/circuits.geojson",
         });
         map.addLayer({
           id: "track-outlines",
@@ -562,7 +635,7 @@
         const popup = new mapboxgl.Popup({ closeOnClick: true })
           .setLngLat(currentFeature.geometry.coordinates)
           .setHTML(
-            `<h3>${currentFeature.properties.name}</h3><h4>${currentFeature.properties.location}</h4>`
+            `<h3>${currentFeature.properties.raceName} Grand Prix</h3><h4>${currentFeature.properties.location}</h4>`
           )
           .addTo(map);
       }
