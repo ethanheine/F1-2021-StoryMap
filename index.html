@@ -635,7 +635,7 @@
         const popup = new mapboxgl.Popup({ closeOnClick: true })
           .setLngLat(currentFeature.geometry.coordinates)
           .setHTML(
-            `<h3>${currentFeature.properties.raceName} Grand Prix</h3><h4>${currentFeature.properties.location}</h4>`
+            `<h3>${currentFeature.properties.raceName} Grand Prix</h3><h4>${currentFeature.properties.content}</h4>`
           )
           .addTo(map);
       }
