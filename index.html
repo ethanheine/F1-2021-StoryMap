@@ -1,55 +1,99 @@
+<!--Utilized the Mapbox tutorial titled "Build a store locator using Mapbox GL JS
+    https://docs.mapbox.com/help/tutorials/building-a-store-locator/"-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>F1 2023</title>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
     <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Titillium+Web&display=swap"
-      rel="stylesheet"
-    />
+
+    <title>F1 Map</title>
+
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       body {
+        color: #404040;
+        font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", sans-serif;
         margin: 0;
         padding: 0;
-        font-family: "Titillium Web", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1 {
+        font-size: 22px;
+        margin: 0;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 20px 2px;
+      }
+
+      a {
+        color: #404040;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #101010;
+      }
+
+      .sidebar {
+        position: absolute;
+        width: 33.3333%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        border-right: 1px solid rgba(0, 0, 0, 0.25);
+      }
+
+      .map {
+        position: absolute;
+        left: 33.3333%;
+        width: 66.6666%;
+        top: 0;
+        bottom: 0;
+      }
+
+      .heading {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 10px;
       }
     </style>
   </head>
   <body>
-    <div id="map"></div>
-
     <div class="sidebar">
       <div class="heading">
-        <h1 id="pagetitle">Formula One 2023 Calendar</h1>
+        <h1>Formula 1 2023 Calendar</h1>
       </div>
-
       <div id="races" class="races"></div>
     </div>
+    <div id="map" class="map"></div>
 
     <script>
-      // Map
       mapboxgl.accessToken =
         "pk.eyJ1IjoiZXRoYW5oZWluZSIsImEiOiJjbGlmYjhwNTgwY2M1M2ptc2xucHhuMXY2In0.i01L2hrCZX-j45M3QBNing";
-      var map = new mapboxgl.Map({
+
+      const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/outdoors-v12",
-        center: [3.52307, 26.7682],
+        center: [0, 0],
         zoom: 2,
-        minZoom: 2,
-        maxZoom: 15,
+        scrollZoom: true,
       });
 
-      // Circuit locations
-      const circuits = {
+      const races = {
         type: "FeatureCollection",
         features: [
           {
@@ -57,18 +101,18 @@
             properties: {
               location: "Sakhir, Bahrain",
               name: "Bahrain International Circuit",
-              raceName: "Bahrain",
+              "Race Name": "Bahrain",
               opened: 2002,
               firstgp: 2004,
-              racesHeld: 20,
+              "races-held": 20,
               length: 5412,
               altitude: -16,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Lewis Hamilton (5)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Lewis Hamilton (5)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [50.512, 26.031],
             },
           },
@@ -77,18 +121,18 @@
             properties: {
               location: "Jeddah, Saudi Arabia",
               name: "Jeddah Corniche Circuit",
-              raceName: "Saudi Arabian",
+              "Race Name": "Saudi Arabian",
               opened: 2021,
               firstgp: 2021,
-              racesHeld: 3,
+              "races-held": 3,
               length: 6175,
               altitude: 12,
-              trackType: "Street circuit",
-              pastWinner: "Sergio Perez",
-              mostWins: "Lewis Hamilton, Sergio Perez & Max Verstappen (1)",
+              "track-type": "Street circuit",
+              "past-winner": "Sergio Perez",
+              "most-wins": "Lewis Hamilton, Sergio Perez & Max Verstappen (1)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [39.104, 21.632],
             },
           },
@@ -97,18 +141,18 @@
             properties: {
               location: "Melbourne, Australia",
               name: "Albert Park Circuit",
-              raceName: "Australian",
+              "Race Name": "Australian",
               opened: 1953,
               firstgp: 1996,
-              racesHeld: 26,
+              "races-held": 26,
               length: 5027,
               altitude: 10,
-              trackType: "Street circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Lex Davison & Michael Schumacher (4)",
+              "track-type": "Street circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Lex Davison & Michael Schumacher (4)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [144.97, -37.846],
             },
           },
@@ -117,18 +161,18 @@
             properties: {
               location: "Baku, Azerbaijan",
               name: "Baku City Circuit",
-              raceName: "Azerbaijan",
+              "Race Name": "Azerbaijan",
               opened: 2016,
               firstgp: 2016,
-              racesHeld: 7,
+              "races-held": 7,
               length: 6003,
               altitude: -25,
-              trackType: "Street circuit",
-              pastWinner: "Sergio Perez",
-              mostWins: "Sergio Perez (2)",
+              "track-type": "Street circuit",
+              "past-winner": "Sergio Perez",
+              "most-wins": "Sergio Perez (2)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [49.842, 40.369],
             },
           },
@@ -137,18 +181,18 @@
             properties: {
               location: "Miami, United States",
               name: "Miami International Autodrome",
-              raceName: "Miami",
+              "Race Name": "Miami",
               opened: 2022,
               firstgp: 2022,
-              racesHeld: 2,
+              "races-held": 2,
               length: 5412,
               altitude: 1,
-              trackType: "Street circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Max Verstappen (2)",
+              "track-type": "Street circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Max Verstappen (2)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [-80.239, 25.958],
             },
           },
@@ -157,18 +201,18 @@
             properties: {
               location: "Imola, Italy",
               name: "Autodromo Enzo e Dino Ferrari",
-              raceName: "Emilia Romagna",
+              "Race Name": "Emilia Romagna",
               opened: 1953,
               firstgp: 1980,
-              racesHeld: 30,
+              "races-held": 30,
               length: 4909,
               altitude: 47,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Michael Schumacher (7)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Michael Schumacher (7)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [11.713, 44.341],
             },
           },
@@ -177,18 +221,18 @@
             properties: {
               location: "Monte Carlo, Monaco",
               name: "Circuit de Monaco",
-              raceName: "Monaco",
+              "Race Name": "Monaco",
               opened: 1929,
               firstgp: 1929,
-              racesHeld: 69,
+              "races-held": 69,
               length: 3337,
               altitude: 47,
-              trackType: "Street circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Ayrton Senna (6)",
+              "track-type": "Street circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Ayrton Senna (6)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [7.429, 43.737],
             },
           },
@@ -197,18 +241,18 @@
             properties: {
               location: "Barcelona, Spain",
               name: "Circuit de Barcelona-Catalunya",
-              raceName: "Spanish",
+              "Race Name": "Spanish",
               opened: 1991,
               firstgp: 1991,
-              racesHeld: 33,
+              "races-held": 33,
               length: 4655,
               altitude: 165,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Michael Schumacher & Lewis Hamilton (6)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Michael Schumacher & Lewis Hamilton (6)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [2.259, 41.569],
             },
           },
@@ -217,18 +261,18 @@
             properties: {
               location: "Montreal, Canada",
               name: "Circuit Gilles-Villeneueve",
-              raceName: "Canadian",
+              "Race Name": "Canadian",
               opened: 1978,
               firstgp: 1978,
-              racesHeld: 41,
+              "races-held": 41,
               length: 4361,
               altitude: 13,
-              trackType: "Street circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Michael Schumacher & Lewis Hamilton (7)",
+              "track-type": "Street circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Michael Schumacher & Lewis Hamilton (7)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [-73.525, 45.506],
             },
           },
@@ -237,18 +281,18 @@
             properties: {
               location: "Spielberg, Austria",
               name: "Red Bull Ring",
-              raceName: "Austrian",
+              "Race Name": "Austrian",
               opened: 1969,
               firstgp: 1970,
-              racesHeld: 36,
+              "races-held": 36,
               length: 4318,
               altitude: 721,
-              trackType: "Race circuit",
-              pastWinner: "Charles Leclerc",
-              mostWins: "Jo Siffert, Alain Prost & Max Verstappen (3)",
+              "track-type": "Race circuit",
+              "past-winner": "Charles Leclerc",
+              "most-wins": "Jo Siffert, Alain Prost & Max Verstappen (3)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [14.761, 47.223],
             },
           },
@@ -257,18 +301,18 @@
             properties: {
               location: "Silverstone, United Kingdom",
               name: "Silverstone Circuit",
-              raceName: "British",
+              "Race Name": "British",
               opened: 1948,
               firstgp: 1950,
-              racesHeld: 57,
+              "races-held": 57,
               length: 5891,
               altitude: 196,
-              trackType: "Race circuit",
-              pastWinner: "Carlos Sainz",
-              mostWins: "Lewis Hamilton (7)",
+              "track-type": "Race circuit",
+              "past-winner": "Carlos Sainz",
+              "most-wins": "Lewis Hamilton (7)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [-1.017, 52.072],
             },
           },
@@ -277,18 +321,18 @@
             properties: {
               location: "Budapest, Hungary",
               name: "Hungaroring",
-              raceName: "Hungarian",
+              "Race Name": "Hungarian",
               opened: 1986,
               firstgp: 1986,
-              racesHeld: 37,
+              "races-held": 37,
               length: 4381,
               altitude: 239,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Lewis Hamilton (8)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Lewis Hamilton (8)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [19.25, 47.583],
             },
           },
@@ -297,18 +341,18 @@
             properties: {
               location: "Spa Francorchamps, Belgium",
               name: "Circuit de Spa-Francorchamps",
-              raceName: "Belgian",
+              "Race Name": "Belgian",
               opened: 1925,
               firstgp: 1950,
-              racesHeld: 55,
+              "races-held": 55,
               length: 7004,
               altitude: 413,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Michael Schumacher (6)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Michael Schumacher (6)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [5.971, 50.436],
             },
           },
@@ -317,18 +361,18 @@
             properties: {
               location: "Zandvoort, Netherlands",
               name: "Circuit Zandvoort",
-              raceName: "Dutch",
+              "Race Name": "Dutch",
               opened: 1948,
               firstgp: 1952,
-              racesHeld: 32,
+              "races-held": 32,
               length: 4259,
               altitude: 3,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Jim Clark (4)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Jim Clark (4)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [4.541, 52.389],
             },
           },
@@ -337,18 +381,18 @@
             properties: {
               location: "Monza, Italy",
               name: "Autodromo Nazionale Monza",
-              raceName: "Italian",
+              "Race Name": "Italian",
               opened: 1922,
               firstgp: 1950,
-              racesHeld: 72,
+              "races-held": 72,
               length: 5793,
               altitude: 142,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Michael Schumacher & Lewis Hamilton (5)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Michael Schumacher & Lewis Hamilton (5)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [9.29, 45.621],
             },
           },
@@ -357,18 +401,18 @@
             properties: {
               location: "Singapore",
               name: "Marina Bay Street Circuit",
-              raceName: "Singapore",
+              "Race Name": "Singapore",
               opened: 2008,
               firstgp: 2008,
-              racesHeld: 13,
+              "races-held": 13,
               length: 4928,
               altitude: 18,
-              trackType: "Street circuit",
-              pastWinner: "Sergio Perez",
-              mostWins: "Sebastian Vettel (5)",
+              "track-type": "Street circuit",
+              "past-winner": "Sergio Perez",
+              "most-wins": "Sebastian Vettel (5)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [103.859, 1.291],
             },
           },
@@ -377,18 +421,18 @@
             properties: {
               location: "Suzuka, Japan",
               name: "Suzuka International Racing Circuit",
-              raceName: "Japanese",
+              "Race Name": "Japanese",
               opened: 1962,
               firstgp: 1987,
-              racesHeld: 32,
+              "races-held": 32,
               length: 5807,
               altitude: 60,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Michael Schumacher (6)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Michael Schumacher (6)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [136.534, 34.844],
             },
           },
@@ -397,18 +441,18 @@
             properties: {
               location: "Lusail, Qatar",
               name: "Losail Internaitonal Circuit",
-              raceName: "Qatar",
+              "Race Name": "Qatar",
               opened: 2004,
               firstgp: 2021,
-              racesHeld: 1,
+              "races-held": 1,
               length: 5380,
               altitude: 5,
-              trackType: "Race circuit",
-              pastWinner: "Lewis Hamilton",
-              mostWins: "Lewis Hamilton (1)",
+              "track-type": "Race circuit",
+              "past-winner": "Lewis Hamilton",
+              "most-wins": "Lewis Hamilton (1)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [51.454, 25.49],
             },
           },
@@ -417,18 +461,18 @@
             properties: {
               location: "Austin, United States",
               name: "Circuit of the Americas",
-              raceName: "United States",
+              "Race Name": "United States",
               opened: 2012,
               firstgp: 2012,
-              racesHeld: 10,
+              "races-held": 10,
               length: 5514,
               altitude: 130,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Lewis Hamilton (6)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Lewis Hamilton (6)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [-97.633, 30.135],
             },
           },
@@ -437,18 +481,18 @@
             properties: {
               location: "Mexico City, Mexico",
               name: "Autodromo Hermanos Rodriquez",
-              raceName: "Mexican",
+              "Race Name": "Mexican",
               opened: 1962,
               firstgp: 1963,
-              racesHeld: 22,
+              "races-held": 22,
               length: 4304,
               altitude: 2232,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Max Verstappen (4)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Max Verstappen (4)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [-99.091, 19.402],
             },
           },
@@ -457,18 +501,18 @@
             properties: {
               location: "Sao Paulo, Brazil",
               name: "Autodromo Jose Carlos Pace - Interlagos",
-              raceName: "Brazilian",
+              "Race Name": "Brazilian",
               opened: 1940,
               firstgp: 1972,
-              racesHeld: 39,
+              "races-held": 39,
               length: 4309,
               altitude: 765,
-              trackType: "Race circuit",
-              pastWinner: "George Russell",
-              mostWins: "Alain Prost (6)",
+              "track-type": "Race circuit",
+              "past-winner": "George Russell",
+              "most-wins": "Alain Prost (6)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [-46.698, -23.702],
             },
           },
@@ -477,18 +521,18 @@
             properties: {
               location: "Las Vegas, United States",
               name: "Las Vegas Street Circuit",
-              raceName: "Las Vegas",
+              "Race Name": "Las Vegas",
               opened: 2023,
               firstgp: 2023,
-              racesHeld: 0,
+              "races-held": 0,
               length: 6116,
               altitude: 610,
-              trackType: "Street circuit",
-              pastWinner: "N/A",
-              mostWins: "N/A",
+              "track-type": "Street circuit",
+              "past-winner": "N/A",
+              "most-wins": "N/A",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [-115.168, 36.116],
             },
           },
@@ -497,72 +541,23 @@
             properties: {
               location: "Abu Dhabi, United Arab Emirates",
               name: "Yas Marina Circuit",
-              raceName: "Abu Dhabi",
+              "Race Name": "Abu Dhabi",
               opened: 2009,
               firstgp: 2009,
-              racesHeld: 14,
+              "races-held": 14,
               length: 5554,
               altitude: 9,
-              trackType: "Race circuit",
-              pastWinner: "Max Verstappen",
-              mostWins: "Lewis Hamilton (5)",
+              "track-type": "Race circuit",
+              "past-winner": "Max Verstappen",
+              "most-wins": "Lewis Hamilton (5)",
             },
             geometry: {
-              type: "Feature",
+              type: "Point",
               coordinates: [54.601, 24.471],
             },
           },
         ],
       };
-
-      map.on("load", () => {
-        map.addLayer({
-            id: "circuits",
-            type: "circle",
-
-            source: {
-                type: "geojson",
-                data: circuits,
-            },
-        });
-        // Add circuits to sidebar
-        buildLocationList(circuits);
-      });
-
-      map.on("click", (event) => {
-        const features = map.queryRenderedFeatures(event.point, {
-            layers: ["circuits"],
-        });
-
-        if (!features.length) return;
-
-        const clickedPoint = features[0];
-
-        // Fly to the point
-        flyToVenue(clickedPoint);
-
-        // Show popup for selected circuit
-        createPopUp(clickedPoint);
-
-        // Highlight race in sidebar
-        const activeItem = document.getElementsByClassName("active");
-        if (activeItem[0]) {
-            activeItem[0].classList.remove("active");
-        }
-        const race = document.getElementById(
-            `race-${clickedPoint.properties.id}`
-        );
-        race.classList.add("active");
-      });
-
-      function buildLocationList(circuits) {
-        for (const circuit of circuits.features) {
-            // Add a new race to the sidebar
-            const races = document.getElementById("races");
-            const race = races.appendChild(document.createElement("div"));
-
-        }
-      }
     </script>
   </body>
 </html>
